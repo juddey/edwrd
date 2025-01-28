@@ -144,7 +144,7 @@
                               href="#"
                               class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
                             >
-                              <%= team %>
+                              {team}
                             </a>
                           </li>
                         <% end %>
@@ -192,42 +192,16 @@
                       </button>
                       <!-- Expandable link section, show/hide based on state. -->
                       <ul class="mt-1 px-2" id="sub-menu-2">
-                        <li>
-                          <!-- 44px -->
-                          <a
-                            href="#"
-                            class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
-                          >
-                            GraphQL API
-                          </a>
-                        </li>
-                        <li>
-                          <!-- 44px -->
-                          <a
-                            href="#"
-                            class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
-                          >
-                            iOS App
-                          </a>
-                        </li>
-                        <li>
-                          <!-- 44px -->
-                          <a
-                            href="#"
-                            class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
-                          >
-                            Android App
-                          </a>
-                        </li>
-                        <li>
-                          <!-- 44px -->
-                          <a
-                            href="#"
-                            class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
-                          >
-                            New Customer Portal
-                          </a>
-                        </li>
+                        <%= for project <- ["GraphQL API", "iOS App", "Android App", "New Customer Portal"] do %>
+                          <li>
+                            <a
+                              href="#"
+                              class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
+                            >
+                              {project}
+                            </a>
+                          </li>
+                        <% end %>
                       </ul>
                     </div>
                   </li>
@@ -414,7 +388,7 @@
                           href="#"
                           class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
                         >
-                          <%= team %>
+                          {team}
                         </a>
                       </li>
                     <% end %>
@@ -462,42 +436,16 @@
                   </button>
                   <!-- Expandable link section, show/hide based on state. -->
                   <ul class="mt-1 px-2" id="sub-menu-2">
-                    <li>
-                      <!-- 44px -->
-                      <a
-                        href="#"
-                        class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
-                      >
-                        GraphQL API
-                      </a>
-                    </li>
-                    <li>
-                      <!-- 44px -->
-                      <a
-                        href="#"
-                        class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
-                      >
-                        iOS App
-                      </a>
-                    </li>
-                    <li>
-                      <!-- 44px -->
-                      <a
-                        href="#"
-                        class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
-                      >
-                        Android App
-                      </a>
-                    </li>
-                    <li>
-                      <!-- 44px -->
-                      <a
-                        href="#"
-                        class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
-                      >
-                        New Customer Portal
-                      </a>
-                    </li>
+                    <%= for project <- ["GraphQL API", "iOS App", "Android App", "New Customer Portal"] do %>
+                      <li>
+                        <a
+                          href="#"
+                          class="block rounded-md py-2 pr-2 pl-9 text-sm/6 text-gray-700 hover:bg-gray-50"
+                        >
+                          {project}
+                        </a>
+                      </li>
+                    <% end %>
                   </ul>
                 </div>
               </li>
