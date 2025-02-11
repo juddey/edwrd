@@ -365,58 +365,146 @@
     </div>
     <main data-theme="corporate" class="py-10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mb-2 text-2xl font-extralight">Samwise Gamgee</div>
-        <div class="text-sm mb-8">Applying For: Bachelor of Middle Earth Studies</div>
-        <div class="grid grid-cols-4">
-          <div class="text-2xl font-semibold">History of Middle Earth</div>
-          <div class="text-2xl col-start-3">
-            60 points
+        <%!-- Start --%>
+
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="text-2xl font-extralight">Samwise Gamgee</div>
+          <div class="text-sm text-gray-500">Applying For: Bachelor of Middle Earth Studies</div>
+          
+<!-- Academic Plan: Major in History of Middle Earth -->
+          <div class="mt-8">
+            <div
+              class="text-xl font-semibold border-b pb-2 flex justify-between items-center cursor-pointer"
+              onclick="togglePlan('history-of-middle-earth')"
+            >
+              <span>History of Middle Earth</span>
+              <span class="text-gray-700">60 points</span>
+            </div>
+
+            <div
+              id="history-of-middle-earth"
+              class="p-4 rounded-lg border border-gray-200 mt-4 flex gap-y-4 flex-col"
+            >
+              <!-- Level 1 Breakdown -->
+              <div class="space-y-2 ">
+                <div class="flex justify-between items-center pl-3 pr-2 py-1 rounded-md border-b border-gray-200">
+                  <div class="text-lg font-medium text-gray-800">Level 1</div>
+                  <div class="text-gray-700 font-medium">45 points</div>
+                </div>
+                
+<!-- Courses under this Major -->
+                <div class="pl-6 space-y-3 pr-2">
+                  <div class="space-y-2">
+                    <!-- HIST 1001: Granted Credit (clickable) -->
+                    <div
+                      class="flex items-center gap-x-4 cursor-pointer"
+                      onclick="toggleDetails('hist-1001')"
+                    >
+                      <div class="text-gray-700 font-normal">HIST 1001</div>
+                      <div class="flex flex-1 items-center gap-x-2">
+                        Introduction to Middle Earth History
+                        <a
+                          href="#"
+                          class="md:block text-gray-300 hover:text-blue-300"
+                          aria-label="View course details"
+                        >
+                          {Phosphoricons.icon("link",
+                            class: "size-5"
+                          )}
+                        </a>
+                      </div>
+
+                      <span class="text-gray-600">15 points</span>
+                    </div>
+                    
+<!-- 0890198: Course Student Took (smaller, italicized, indented) -->
+                    <div id="hist-1001" class="lg:block pl-6 text-sm text-gray-600">
+                      <div class="flex items-center gap-x-3">
+                        <span><em>0890198</em></span>
+                        <span class="flex-1 flex items-center gap-x-2">
+                          <em>Fantasy and Mythological Worlds</em>
+                          <a
+                            href="#"
+                            class="fill-gray-300 hover:fill-blue-300"
+                            aria-label="View course details"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="size-4 text-gray-300 hover:text-blue-500"
+                              viewBox="0 0 512 512"
+                            >
+                              <path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160l0 8c0 13.3 10.7 24 24 24l400 0c13.3 0 24-10.7 24-24l0-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224l-64 0 0 196.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512l448 0c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1L448 224l-64 0 0 192-40 0 0-192-64 0 0 192-48 0 0-192-64 0 0 192-40 0 0-192zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                            </svg>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-x-4">
+                    <div class="text-gray-700 font-normal">LANG 1003</div>
+                    <div class="flex flex-1 items-center gap-x-2">
+                      Foundations of Elvish Language and Literature
+                      <a
+                        href="#"
+                        class="md:block text-gray-300 hover:text-blue-300"
+                        aria-label="View course details"
+                      >
+                        {Phosphoricons.icon("link",
+                          class: "size-5"
+                        )}
+                      </a>
+                    </div>
+                    <span class="text-gray-600">15 points</span>
+                  </div>
+
+                  <div class="flex items-center gap-x-4">
+                    <div class="text-gray-700">MYTH 1004</div>
+                    <div class="flex flex-1 items-center gap-x-2">
+                      Mythology and Lore of Middle Earth
+                      <a
+                        href="#"
+                        class="md:block text-gray-300 hover:text-blue-300"
+                        aria-label="View course details"
+                      >
+                        {Phosphoricons.icon("link",
+                          class: "size-5"
+                        )}
+                      </a>
+                    </div>
+                    <span class="text-gray-600">15 points</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center pl-3 py-1 rounded-md border border-gray-200 pr-2">
+                <div class="text-lg font-medium text-gray-800">Level 2</div>
+                <div class="text-gray-700 font-medium">15 points</div>
+              </div>
+            </div>
           </div>
-          <div>{Phosphoricons.icon("x", class: "size-5 text-gray-400")}</div>
+          
+<!-- Academic Plan: Specialization in Cultural Studies -->
+          <div class="mt-8">
+            <div
+              class="text-xl font-semibold border-b pb-2 flex justify-between items-center cursor-pointer"
+              onclick="togglePlan('cultural-studies')"
+            >
+              <span>Cultural Studies</span>
+              <span class="text-gray-700">15 points</span>
+            </div>
+
+            <div
+              id="cultural-studies"
+              class="p-4 border rounded-lg border border-gray-200 bg-white mt-4 hidden"
+            >
+              <div>
+                {Phosphoricons.icon("plus", class: "size-5 text-gray-400 cursor-pointer")}
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col gap-y-2 mt-4">
-          <div class="grid grid-cols-4 text-xl">
-            <div>Level 1</div>
-            <div class="col-start-3">45 points</div>
-            <div>{Phosphoricons.icon("x", class: "size-5 text-gray-400")}</div>
-          </div>
-          <div class="grid grid-cols-4 text-lg">
-            <div class="ml-8 flex items-center gap-x-2 col-span-2">
-              HIST 1001
-              <span class="link link-primary">Introduction to Middle Earth History</span>
-            </div>
-            <div class="grid col-start-3">15 points</div>
-            <div>{Phosphoricons.icon("x", class: "size-5 text-gray-400")}</div>
-          </div>
-          <div class="ml-16 flex items-center gap-x-2 text-md">
-            0890198 <span class="link link-primary">Fantasy and Mythological Worlds</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 512 512">
-              <path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160l0 8c0 13.3 10.7 24 24 24l400 0c13.3 0 24-10.7 24-24l0-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224l-64 0 0 196.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512l448 0c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1L448 224l-64 0 0 192-40 0 0-192-64 0 0 192-48 0 0-192-64 0 0 192-40 0 0-192zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
-            </svg>
-          </div>
-          <div class="grid grid-cols-4 text-lg">
-            <div class="ml-8 flex items-center gap-x-2 col-span-2">
-              LANG 1003
-              <span class="link link-primary">Foundations of Elvish Language and Literature</span>
-            </div>
-            <div class="grid col-start-3">15 points</div>
-            <div>{Phosphoricons.icon("plus", class: "size-5 text-gray-400")}</div>
-          </div>
-          <div class="grid grid-cols-4 text-lg">
-            <div class="ml-8 flex items-center gap-x-2 col-span-2">
-              MYTH 1004 <span class="link link-primary">Mythology and Lore of Middle Earth</span>
-            </div>
-            <div class="grid col-start-3">15 points</div>
-            <div>{Phosphoricons.icon("plus", class: "size-5 text-gray-400")}</div>
-          </div>
-          <div class="grid grid-cols-4 mt-6">
-            <div class="text-2xl font-semibold">Cultural Studies</div>
-            <div class="text-2xl col-start-3">
-              15 points
-            </div>
-            <div>{Phosphoricons.icon("plus", class: "size-5 text-gray-400")}</div>
-          </div>
-        </div>
+
+        <%!-- End --%>
       </div>
       <%!-- chat --%>
       <div class="max-w-3xl mt-48 flex flex-col gap-y-2">
